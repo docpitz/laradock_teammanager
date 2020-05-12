@@ -5,7 +5,7 @@
 ### Paths #################################################
 
 # Point to the path of your applications code on your host
-APP_CODE_PATH_HOST=../
+APP_CODE_PATH_HOST=../teammanager/
 
 # Point to where the `APP_CODE_PATH_HOST` should be in the container
 APP_CODE_PATH_CONTAINER=/var/www
@@ -14,7 +14,13 @@ APP_CODE_PATH_CONTAINER=/var/www
 APP_CODE_CONTAINER_FLAG=:cached
 
 # Choose storage path on your machine. For all storage systems
-DATA_PATH_HOST=~/.laradock/data
+DATA_PATH_HOST=../data/
+
+# Point to the path of your  uploaded files  on your host
+UPLOADED_FILE_PATH_HOST=../data/files/
+
+# Point to where the 'UPLOADED_FILE_PATH_HOST' should be in the container
+UPLOADED_FILE_PATH_CONTAINER=/var/www/public/files
 
 ### Drivers ################################################
 
@@ -299,7 +305,7 @@ MYSQL_DATABASE=default
 MYSQL_USER=default
 MYSQL_PASSWORD=secret
 MYSQL_PORT=3306
-MYSQL_ROOT_PASSWORD=root
+MYSQL_ROOT_PASSWORD=#CHANGE_IT#
 MYSQL_ENTRYPOINT_INITDB=./mysql/docker-entrypoint-initdb.d
 
 ### REDIS #################################################
@@ -403,7 +409,7 @@ PMA_DB_ENGINE=mysql
 PMA_USER=default
 PMA_PASSWORD=secret
 PMA_ROOT_PASSWORD=secret
-PMA_PORT=8080
+PMA_PORT=8084
 
 ### MAILDEV ###############################################
 
