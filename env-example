@@ -22,6 +22,10 @@ UPLOADED_FILE_PATH_HOST=../data/files/
 # Point to where the 'UPLOADED_FILE_PATH_HOST' should be in the container
 UPLOADED_FILE_PATH_CONTAINER=/var/www/public/files
 
+# Let's Encrypt needed Variables
+LETSENCRYPT_HOST_NAMES=adress1.example.com, adress2.example.com
+LETSENCRYPT_EMAIL_ADRESS=admin@example.com
+
 ### Drivers ################################################
 
 # All volumes driver
@@ -32,7 +36,7 @@ NETWORKS_DRIVER=bridge
 
 ### Docker compose files ##################################
 
-# Select which docker-compose files to include. If using docker-sync append `:docker-compose.sync.yml` at the end
+# Select which docker-compose files to include. If using docker-sync append `:docker-compose.sync.yml` or ':docker-compose-prod.yml' (Production) at the end
 COMPOSE_FILE=docker-compose.yml
 
 # Change the separator from : to ; on Windows
